@@ -34,6 +34,9 @@ app.post('/api/send-location', async (req, res) => {
     res.status(500).json({ message: 'Error sending email' });
   }
 });
+app.get("/", (req, res) => {
+  res.send("Earora backend is running");
+});
 
 app.listen(3000, () => {
   console.log('Server running on http://localhost:3000');
